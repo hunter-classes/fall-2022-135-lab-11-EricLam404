@@ -11,4 +11,6 @@ private:
 public:
     Network();
     bool addUser(std::string usrn, std::string dspn);
+    
+    bool validateUsername(std::string usrn);
 };

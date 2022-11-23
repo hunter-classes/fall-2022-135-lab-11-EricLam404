@@ -1,7 +1,10 @@
 #include <iostream>
 #include "network.h"
 
-bool validateUsername(std::string usrn){
+
+Network::Network() : numUsers(0) {}
+
+bool Network::validateUsername(std::string usrn){
     for(int i = 0; i < usrn.length(); i++){
         if(!isalpha(usrn[i])){
             return false;
@@ -9,8 +12,6 @@ bool validateUsername(std::string usrn){
     }
     return true;
 }
-
-Network::Network() : numUsers(0) {}
 
 int Network::findID(std::string usrn){
     for(int i = 0; i < 20; i++){
