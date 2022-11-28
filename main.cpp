@@ -14,4 +14,5 @@ int main(){
     nw.follow("luigi", "yoshi");
 
     nw.printDot();
+    
 }
