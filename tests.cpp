@@ -2,6 +2,7 @@
 #include "doctest.h"
 #include "profile.h"
 #include "network.h"
+#include "social3.h"
 
 TEST_CASE("TASK A"){
     Profile p1("marco", "Marco"); 
@@ -15,4 +16,15 @@ TEST_CASE("TASK B"){
     Network nw;
     CHECK(nw.addUser("mario", "Mario") == true);
     CHECK(nw.addUser("mario", "Mario2") == false);
+}
+
+TEST_CASE("Task C tests"){
+	Social3 social;
+	
+	social.addUser("mario", "Mario");
+    social.addUser("luigi", "Luigi");
+    social.addUser("yoshi", "Yoshi");
+
+	CHECK(social.follow("mario", "luigi") == true);
+	CHECK(social.follow("mario", "sam") == false);
 }
